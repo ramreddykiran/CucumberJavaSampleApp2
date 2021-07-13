@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.demo.cucumber</groupId>
-	<artifactId>Culcaumber-Calculator-Demo</artifactId>
+	<artifactId>CucumberJavaSampleApp2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
 		<cucumber.version>1.2.5</cucumber.version>
@@ -35,6 +35,33 @@
 		<pluginManagement>
 			<plugins>
 				<plugin>
+					<groupId>net.masterthought</groupId>
+    				<artifactId>cucumber-reporting</artifactId>
+    				<version>5.5.3</version>
+    				<executions>
+    					<execution>
+    						<id>execution</id>
+    						<phase>verify</phase>
+    						<goals>
+    							<goal>generate</goal>
+    						</goals>
+    						<configuration>
+    							<projectName>CucumberJavaSampleApp2</projectName>
+    							<outputDirectory>${project.build.directory}/html-report</outputDirectory>
+    							<enableFlashCharts>true</enableFlashCharts>
+    							<buildNumber>1</buildNumber>
+    							<parallelTesting>true</parallelTesting>
+    							<inputDirectory>${project.build.directory}</inputDirectory>
+    							<jsonFiles>
+    								<jsonFile>**/cucumber.json</jsonFile>
+    							</jsonFiles>
+    							<testFailureIgnore>true</testFailureIgnore>
+    							<buildSuccessOnTestFailure>true</buildSuccessOnTestFailure>
+    						</configuration>
+    					</execution>
+    				</executions>
+				</plugin>
+				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.7.0</version>
@@ -44,6 +71,7 @@
 						<target>1.7</target>
 					</configuration>
 				</plugin>
+				
 			</plugins>
 		</pluginManagement>
 	</build>
