@@ -11,7 +11,7 @@ plugin = { "pretty:pretty-report.log",
 		"junit:target/cucumber.xml" ,
 		//"progress",
 	//	"usage",
-		"rerun:target/rerun.txt"
+		"rerun:target1/rerun.txt"
 		}, 
 glue= {"com.def.stepdefs.combined"},
 monochrome = true

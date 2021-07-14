@@ -13,7 +13,7 @@ Feature: Calculator
       | function | a | b | result | type     |
       | add      | 1 | 2 |      3 | positive |
       | add      | 2 | 5 |      7 | positive |
-      | add      | 7 | 9 |     15 | positive |
+      | add      | 7 | 9 |     16 | positive |
       | subtract | 7 | 9 |      2 | negative |
 
   @combinedtag

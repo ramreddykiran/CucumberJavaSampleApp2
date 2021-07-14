@@ -4,7 +4,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "@target/rerun.txt" , 
+@CucumberOptions(features = "@target1/rerun.txt" , 
 plugin = { "pretty:pretty-report.log", 
 		"html:target1/html-report",
 		"json:target1/cucumber.json" ,
