@@ -49,8 +49,8 @@
     							<projectName>CucumberJavaSampleApp2</projectName>
     							<outputDirectory>${project.build.directory}/html-report</outputDirectory>
     							<enableFlashCharts>true</enableFlashCharts>
-    							<buildNumber>1</buildNumber>
-    							<parallelTesting>true</parallelTesting>
+    							<buildNumber>42</buildNumber>
+    							<parallelTesting>false</parallelTesting>
     							<inputDirectory>${project.build.directory}</inputDirectory>
     							<jsonFiles>
     								<jsonFile>**/cucumber.json</jsonFile>
@@ -60,6 +60,20 @@
     						</configuration>
     					</execution>
     				</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+    				<artifactId>maven-surefire-plugin</artifactId>
+    				<version>2.22.2</version>
+    				<configuration>
+    					<forkCount>7</forkCount>
+    					<reuseForks>true</reuseForks>
+    					<includes>
+    						<include>**/TestRunner.class</include>
+    						<include>**/TestRunnerRerun.class</include>
+    					</includes>
+    				</configuration>
+				
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>

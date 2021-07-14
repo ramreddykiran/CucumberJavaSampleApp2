@@ -4,17 +4,16 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(tags = { "@combinedtag" }, 
+@CucumberOptions(features = "@target/rerun.txt" , 
 plugin = { "pretty:pretty-report.log", 
-		"html:target/html-report",
-		"json:target/cucumber.json" ,
-		"junit:target/cucumber.xml" ,
+		"html:target1/html-report",
+		"json:target1/cucumber.json" ,
+		"junit:target1/cucumber.xml" 
 		//"progress",
 	//	"usage",
-		"rerun:target/rerun.txt"
 		}, 
 glue= {"com.def.stepdefs.combined"},
 monochrome = true
 )
-public class TestRunner {
+public class TestRunnerRerun {
 }
